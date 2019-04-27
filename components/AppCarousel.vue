@@ -35,6 +35,9 @@
         </li>
       </transition>
     </ul>
+    <div class="slider__control">
+      <button v-for="project in projects" :key="project">[o]</button>
+    </div>
   </div>
 </template>
 
@@ -109,16 +112,7 @@ export default {
         ease: Power3.easeOut,
         delay: 1.4
       });
-
-      detailAnime.call(
-        function() {
-          const target = document.querySelector(".project__subtitle");
-          if (target) target.classList.add("red");
-        },
-        null,
-        null,
-        1.8
-      );
+      detailAnime.set(".project__subtitle", { className: "+=red" });
     },
 
     leave(el, done) {
@@ -187,6 +181,12 @@ export default {
   }
 }
 
+.slider__control {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .cross_item .project {
   height: 100vh;
 }
