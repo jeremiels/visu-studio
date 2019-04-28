@@ -1,11 +1,4 @@
-const routerBase =
-  process.env.DEPLOY_ENV === "GH_PAGES"
-    ? {
-        router: {
-          base: "/visu-studio/"
-        }
-      }
-    : {};
+const routerBase = process.env.DEPLOY_ENV === "GEN" ? "/visu-studio/" : "/";
 
 module.exports = {
   // déploiement github-pages
