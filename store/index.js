@@ -10,26 +10,26 @@ const createStore = () => {
           id: "luminoscope",
           name: "Lumi Noscope",
           category: ["mapping vidéo"],
-          image: "/luminoscope.jpg"
+          image: "luminoscope.jpg"
         },
         {
           id: "frequences",
           name: "Fréquence(s)",
           subtitle: "Live A/V",
           category: ["scénographie"],
-          image: "/frequence.jpg"
+          image: "frequence.jpg"
         },
         {
           id: "crush_for_crash",
           name: "Crush for _crash",
           category: ["lumières"],
-          image: "/crush_for_crash.jpg"
+          image: "crush_for_crash.jpg"
         },
         {
           id: "armistice",
           name: "Armistice party",
           category: ["mapping vidéo", "lumières"],
-          image: "/armistice.jpg"
+          image: "armistice.jpg"
         }
       ],
       routes: [
