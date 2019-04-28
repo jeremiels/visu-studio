@@ -30,15 +30,7 @@ module.exports = {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display"
-      },
-      {
-        rel: "script"
-      }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ],
     script: [
       {
@@ -46,7 +38,7 @@ module.exports = {
       }
     ]
   },
-  css: ["assets/style.css"],
+  css: ["@/assets/css/style.css"],
 
   /*
    ** Customize the progress bar color

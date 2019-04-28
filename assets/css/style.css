@@ -1,20 +1,20 @@
 @font-face {
   font-family: "CeraProThin";
-  src: url("./../assets/fonts/CeraProThin.ttf");
+  src: url("./../../assets/fonts/CeraProThin.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CeraProReg";
-  src: url("./../assets/fonts/CeraProRegular.ttf");
+  src: url("./../../assets/fonts/CeraProRegular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "CeraProBlack";
-  src: url("./../assets/fonts/CeraProBlack.ttf");
+  src: url("./../../assets/fonts/CeraProBlack.ttf");
   font-weight: normal;
   font-style: normal;
 }
