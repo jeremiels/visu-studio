@@ -1,4 +1,15 @@
+const routerBase =
+  process.env.DEPLOY_ENV === "GH_PAGES"
+    ? {
+        router: {
+          base: "/<nom-du-depot>/"
+        }
+      }
+    : {};
 module.exports = {
+  // déploiement github-pages
+  ...routerBase,
+
   /*
    ** Headers of the page
    */
@@ -41,5 +52,16 @@ module.exports = {
   /*
    ** Build configuration
    */
-  build: {}
+  build: {},
+  /**
+   * Generate static site
+   */
+  generate: {
+    routes: [
+      "/projects/luminoscope",
+      "/projects/frequence",
+      "/projects/crush_for_crash",
+      "/projects/armistice"
+    ]
+  }
 };
