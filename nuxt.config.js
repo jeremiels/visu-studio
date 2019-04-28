@@ -59,7 +59,6 @@ module.exports = {
    */
   generate: {
     routes: [
-      "/projects",
       "/projects/luminoscope",
       "/projects/frequence",
       "/projects/crush_for_crash",
