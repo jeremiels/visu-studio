@@ -23,7 +23,7 @@ const createStore = () => {
           id: "crush_for_crash",
           name: "Crush for _crash",
           category: ["lumières"],
-          image: "crush_for_crash.jpg"
+          image: "/crush_for_crash.jpg"
         },
         {
           id: "armistice",
