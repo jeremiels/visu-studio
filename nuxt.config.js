@@ -1,14 +1,20 @@
-const routerBase = process.env.DEPLOY_ENV === "GEN" ? "/visu-studio/" : "/";
+const routerBase =
+  process.env.DEPLOY_ENV === "GH_PAGES"
+    ? {
+        router: {
+          middleware: "pages",
+          base: "/visu-studio/"
+        }
+      }
+    : {
+        router: {
+          middleware: "pages",
+          base: "/"
+        }
+      };
 
 module.exports = {
-  // déploiement github-pages
-  // router: {
-  //   base: ...routerBase
-  // },
-  router: {
-    base: "/visu-studio/"
-  },
-
+  ...routerBase,
   /*
    ** Headers of the page
    */
@@ -41,9 +47,7 @@ module.exports = {
     ]
   },
   css: ["assets/style.css"],
-  router: {
-    middleware: "pages"
-  },
+
   /*
    ** Customize the progress bar color
    */
