@@ -55,7 +55,7 @@
   right: 40px;
   width: 150px;
   height: 150px;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 1));
+  /* filter: drop-shadow(0 0 6px rgba(255, 255, 255, 1)); */
   z-index: 1;
 }
 
