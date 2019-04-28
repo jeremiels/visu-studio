@@ -2,7 +2,12 @@ const routerBase = process.env.DEPLOY_ENV === "GEN" ? "/visu-studio/" : "/";
 
 module.exports = {
   // déploiement github-pages
-  ...routerBase,
+  // router: {
+  //   base: ...routerBase
+  // },
+  router: {
+    base: "/visu-studio/"
+  },
 
   /*
    ** Headers of the page
