@@ -26,12 +26,6 @@
               </div>
             </nuxt-link>
           </section>
-          <!-- <div class="cross_thumbnail" :ref="'thumbnail' + index">
-            <img class="cross_thumbnail_image" :src="project.image">
-          </div>
-          <div class="cross_detail" :ref="'detail' + index">
-            <p class="cross_detail_paragraph" v-html="project.name"></p>
-          </div>-->
         </li>
       </transition>
     </ul>
@@ -72,11 +66,12 @@ export default {
       this.selected = this.nextPick;
     },
 
+    // afterEnter timer: temps d'affichage d'un slide
     afterEnter() {
-      // timer: temps d'affichage d'un slide
       setTimeout(this.change, this.timer * 750);
     },
 
+    // enter : élément entrant
     enter(el, done) {
       const thumbnail = this.$refs["thumbnail" + this.selected];
       const detail = this.$refs["detail" + this.selected];
@@ -115,6 +110,7 @@ export default {
       detailAnime.set(".project__subtitle", { className: "+=red" });
     },
 
+    // leave: élément sortant
     leave(el, done) {
       const thumbnail = this.$refs["thumbnail" + this.last];
       const detail = this.$refs["detail" + this.last];
