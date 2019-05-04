@@ -50,12 +50,12 @@ html {
 .page-enter-active,
 .page-leave-active {
   transition: all 0.85s ease-in-out;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .page-enter,
 .page-leave-active {
   opacity: 0;
-  transform: translateY(200px);
+  transform: translateX(200px);
   backface-visibility: hidden;
 }
 </style>

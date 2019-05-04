@@ -10,7 +10,9 @@
         <nuxt-link :to="'/projects/'+project.id">
           <div class="project__txt-wrapper">
             <h1 class="project__title">{{ project.name }}</h1>
-            <h2 class="project__subtitle" v-if="project.subtitle">{{ project.subtitle}}</h2>
+            <div class="image">
+              <h2 class="project__subtitle" v-if="project.subtitle">{{ project.subtitle}}</h2>
+            </div>
             <small class="project_cat">{{ project.category}}</small>
           </div>
           <img class="project__bg" :src="project.image">
@@ -59,7 +61,6 @@ export default {
   transform: translateY(-50%);
 }
 .project__title {
-  padding-right: 20px;
   color: #fff;
   font-family: "CeraProBlack";
   font-size: 48px;
@@ -67,11 +68,61 @@ export default {
   text-transform: uppercase;
 }
 .project__subtitle {
-  margin-bottom: 20px;
+  display: inline-block;
   color: #fff;
   font-family: "CeraProThin";
   font-size: 32px;
+}
+.image {
+  position: relative;
+  overflow: hidden;
+}
+.project__subtitle {
+  line-height: 1;
+  margin: 0;
   text-transform: uppercase;
+  animation: fadeIn 0s 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.image::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f0f2f6;
+  transform: translateY(-100%);
+  animation: secondaryImageOverlayIn 0.3s 0s, secondaryImageOverlayOut 0.3s 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes secondaryImageOverlayIn {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes secondaryImageOverlayOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 .project_cat {
   display: block;

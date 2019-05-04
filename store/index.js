@@ -33,8 +33,8 @@ const createStore = () => {
         }
       ],
       routes: [
-        { path: "/about", label: "à propos" },
-        { path: "/projects", label: "projets" },
+        { path: "/a-propos", label: "à propos" },
+        { path: "/projets", label: "projets" },
         { path: "/contact", label: "contact" }
       ]
     },
