@@ -1,5 +1,6 @@
 <template>
   <div class="app-root o-layout">
+    <icon-menu/>
     <app-header/>
     <main class="main">
       <nuxt/>
@@ -64,11 +65,13 @@ html {
 import AppHeader from "~/components/AppHeader.vue";
 import AppSocialLinks from "~/components/AppSocialLinks.vue";
 import AppCursor from "~/components/AppCursor.vue";
+import IconMenu from "~/components/IconMenu.vue";
 export default {
   components: {
     AppHeader,
     AppSocialLinks,
-    AppCursor
+    AppCursor,
+    IconMenu
   }
 };
 </script>
